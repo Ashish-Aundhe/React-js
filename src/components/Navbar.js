@@ -28,7 +28,7 @@ export default function Navbar(props) {
 
       </nav>
 
-  )
+  ) 
 }
 
-Navbar.  
+// Navbar.  
