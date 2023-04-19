@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar title="textUtils" aboutText="About TextUtils" />
-      <div className="container">
+      <div className="container my-3">
         <TextForms heading="Enter the text to anylyst below" />
       </div>
     </>
