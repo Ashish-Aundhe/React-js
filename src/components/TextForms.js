@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 export default function TextForms(props) {
-    const handleUpClick = ()=>{
+    const handleUpClick = () => {
         // console.log("Uppercase was clicked" + text);
         let newText = text.toUpperCase();
         setText(newText)
     }
-    const handleOnChange = (event)=>{
+    const handleOnChange = (event) => {
         // console.log("On change");
         setText(event.target.value)
     }
@@ -14,13 +14,20 @@ export default function TextForms(props) {
     const [text, setText] = useState("Enter text here2");
     //text = "new text"; // wrong  way to change the state
     // setText("new text"); //corrrect way to change the state
-    return ( 
-        <div>
-            <h1>{props.heading}</h1>
-            <div className="mb-3">
-                <textarea className="form-control"  value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+    return (
+        <>
+            <div>
+                <h1>{props.heading}</h1>
+                <div className="mb-3">
+                    <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+                </div>
+                <button className="btn btn-primary" onClick={handleUpClick}>Convert to uppercase</button>
             </div>
-            <button className="btn btn-primary" onClick={handleUpClick}>Convert to uppercase</button>
-        </div>
-    ) 
+            <div className="container my-3">
+                <h1>Your text summery</h1>
+                <p>{text.split(" ").length}word and{text.length} character </p>
+
+            </div>
+        </>
+    )
 }
