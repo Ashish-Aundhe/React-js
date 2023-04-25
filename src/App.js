@@ -12,10 +12,10 @@ function App() {
 
     const toggleMode = ()=>{
       if(mode === 'light'){
-        setMode = 'dark'
+        setMode = 'dark';
       }
       else{
-        setMode = 'light'
+        setMode('light');
       }
     }
   return (
@@ -23,7 +23,7 @@ function App() {
      {/* aboutText="About TextUtils" */}
       <Navbar title="textUtils" mode= {mode} toggleMode = {toggleMode} />   
       <div className="container my-3">
-        <TextForms heading="Enter the text to anylyst below" />
+        <TextForms heading="Enter the text to anylyst below"/>
         {/* <About></About> */}
       </div>
     </>
