@@ -5,23 +5,28 @@ export default function TextForms(props) {
         // console.log("Uppercase was clicked" + text);
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Convertes to Uppercase", "success");
     }
     const handleLoClick = (event) => {
         // console.log("On change");
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert("Convertes to Lowercase", "success");
     }
     const handleOnChange = (event) => {
         // console.log("On change");
         setText(event.target.value)
+        
     }
     const handleClearClick = () =>{
         let newText = '';
         setText(newText)
+        props.showAlert("Text Cleared", "success");
     }
     const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert("Extra Space removed", "success");
     }
     const handleCopy = () => {
         console.log ("i am Copy");
@@ -29,6 +34,7 @@ export default function TextForms(props) {
         text.select();
         text.setSelectionRange(0, 9999);
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied to clipboard", "success");
     }
     const [text, setText] = useState("Enter text here2");
     //text = "new text"; // wrong  way to change the state
