@@ -2,7 +2,7 @@
 import './App.css';  
 import React, { useState } from 'react';
 
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar'; 
 import TextForms from './components/TextForms'; 
 import Alert from './Alert';
@@ -31,7 +31,7 @@ function App() {
         setMode('white');
         document.body.style.backgroundColor = 'white';
         showAlert("Light mode has been enabled", "success");
-      } 
+      }
     }
   return (
     <>
@@ -40,7 +40,7 @@ function App() {
           <Alert alert={alert}/> 
       <div className="container my-3">
           <TextForms showAlert={showAlert} heading="Enter the text to anylyst below" mode={mode}/>
-        {/* <About></About> */}
+        <About></About>
       </div>
     </>
   );
