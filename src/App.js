@@ -31,7 +31,7 @@ function App() {
         setMode('white');
         document.body.style.backgroundColor = 'white';
         showAlert("Light mode has been enabled", "success");
-      }
+      } 
     }
   return (
     <>
