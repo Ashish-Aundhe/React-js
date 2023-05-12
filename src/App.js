@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import TextForms from "./components/TextForms";
 import Alert from "./Alert";
 
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route,} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); //Whether dark mode is enable or not
