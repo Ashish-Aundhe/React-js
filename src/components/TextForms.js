@@ -46,16 +46,15 @@ export default function TextForms(props) {
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{background: props.mode===`dark`?`grey`:`white`, color: props.mode=== 'dark'?'white':'#042743'}}  id="myBox" rows="8"></textarea>
                 </div>
-                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
-                <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
-                <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Clear Extra Spaces</button>
-                <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
-                <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
-
+                <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handleExtraSpaces}>Clear Extra Spaces</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handleCopy}>Copy Text</button>
+                <button className="btn btn-primary mx-2 my-1" onClick={handleClearClick}>Clear Text</button>
             </div>
             <div className="container my-3" style={{color: props.mode===`dark`?`white`:`#042743`}} >
                 <h1>Your text summery</h1>
-                <p>{text.split(" ").filter((Element)=>{return Element.length!==0}).length}word and{text.length} character </p>
+                <p>{text.split(" ").filter((Element)=>{return Element.length!== 0}).length} word and {text.length} character </p>
                 <p>{0.000 * text.split(" ").length} Minutes read </p>
                 <h2>Preview</h2>
                 <p>{text.length>0?text:"Enter something in the textbox above to preview it"}</p>
