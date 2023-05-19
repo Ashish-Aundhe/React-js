@@ -44,7 +44,7 @@ function App() {
 
                  {/* <Switch> is used in old version, it replsced by Routes */}
         <Routes>
-          <Route exact path="/about" element={<About />}> </Route>
+          <Route exact path="/about" element={<About mode={mode} />}> </Route>
 
           <Route
            exact path="/"
