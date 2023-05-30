@@ -23,6 +23,7 @@ function App() {
     }, 1500);
   };
   const toggleMode = (cls) => {
+    console.log(cls)
     if (mode === "light") {
       setMode("dark"); //we cant use setMode='dark' bcz its state varibale
       document.body.style.backgroundColor = "#042743";
