@@ -36,7 +36,7 @@ export default function Navbar(props) {
           <div className="d-flex">
             <div
               className="bg-primary rounded mx-2"
-              onClick={props.toggleMode}
+              onClick={()=>{props.toggleMode('primary')}}
               style={{ height: "30px", width: "30px" }}
             ></div>
           </div>
@@ -54,13 +54,13 @@ export default function Navbar(props) {
               type="checkbox"
               // role="switch"
               id="flexSwitchCheckDefault"
-              onClick={props.toggleMode}
+              onClick={()=>{props.toggleMode('primary')}} 
             />
             <label
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Enable dark mode
+            Toggle Mode
             </label>
           </div>
         </div>
