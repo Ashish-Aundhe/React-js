@@ -45,7 +45,7 @@ export default function Navbar(props) {
           </div>
           <div className="d-flex">
             <div
-              className="bg-danger rounded mx-2"
+              className="bg-danger rounded mx-2 my-2"
               onClick={() => {
                 props.toggleMode('danger');
               }}
@@ -54,7 +54,7 @@ export default function Navbar(props) {
           </div>
           <div className="d-flex">
             <div
-              className="bg-success rounded mx-2"
+              className="bg-success rounded mx-2 my-2"
               onClick={() => {
                 props.toggleMode('success');
               }}

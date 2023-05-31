@@ -22,8 +22,19 @@ function App() {
       setAlert(null);
     }, 1500);
   };
+
+  const removeBodyClasses=()=>{
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-sucess')
+  }
+
   const toggleMode = (cls) => {
+    removeBodyClasses();
     console.log(cls)
+    document.body.classList.add('bg-'+cls)
     if (mode === "light") {
       setMode("dark"); //we cant use setMode='dark' bcz its state varibale
       document.body.style.backgroundColor = "#042743";
