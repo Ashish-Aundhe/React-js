@@ -47,7 +47,7 @@ constructor(){
         <h2>NewsAlert- Top Heading </h2>
         <div className="row">
           <div className="col-md-4">
-            <NewsItem title="myTitle" description="mydesc" />
+            <NewsItem title="myTitle" description="mydesc" imageUrl="https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg" newsUrl="TODOO"/>
           </div>
 
           <div className="col-md-4">
@@ -56,7 +56,7 @@ constructor(){
           <div className="col-md-4">
             <NewsItem title="myTitle" description="mydesc" />
           </div>
-        </div>
+        </div> 
       </div>
     );
   }
